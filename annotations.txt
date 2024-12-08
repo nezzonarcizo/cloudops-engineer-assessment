@@ -101,4 +101,3 @@ Obs: In case the Docker user is not the same as the one with access to the AWS a
 # password: *******
 
 # SELECT * FROM ips;
-
