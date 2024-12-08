@@ -1,6 +1,6 @@
 # **Deploy of a Dockerized Application on AWS with Terraform**
 
-![Project Status](https://img.shields.io/badge/status-finalizado-yellow)  
+![Project Status](https://img.shields.io/badge/status-developing-yellow)  
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange)  
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-blueviolet)  
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
