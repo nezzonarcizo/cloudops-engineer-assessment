@@ -169,27 +169,27 @@ Before starting, ensure you have:
 
 ## **Bonus Points Implemented**
 
-   > My own application
-   My application was created with a simple Dockerfile, using only the lightweight image python:3.9-slim, with updated packages and the PostgreSQL client installed for communication with the database.
+   - My own application:
+   > My application was created with a simple Dockerfile, using only the lightweight image python:3.9-slim, with updated packages and the PostgreSQL client installed for communication with the database.
 
-   The application directory is /reversed-ip-app (same name as the application). The requirements.txt file was added with only the Flask packages/libraries to create a small Python web application, and psycopg2-binary to connect to PostgreSQL.
+   > The application directory is /reversed-ip-app (same name as the application). The requirements.txt file was added with only the Flask packages/libraries to create a small Python web application, and psycopg2-binary to connect to PostgreSQL.
 
-   > Network configuration
-   The network was built and configured with Terraform to segment the environments, keeping only the load balancer in the public subnet. The application and the database were placed in private subnets, each in its own private network. 
+   - Network configuration
+   > The network was built and configured with Terraform to segment the environments, keeping only the load balancer in the public subnet. The application and the database were placed in private subnets, each in its own private network. 
    
-   Communication is handled via a NAT Gateway between the public and private subnets, with a NAT Gateway in each public subnet to ensure high availability. The VPC, of course, includes an Internet Gateway.
+   > Communication is handled via a NAT Gateway between the public and private subnets, with a NAT Gateway in each public subnet to ensure high availability. The VPC, of course, includes an Internet Gateway.
 
-   > Database integration
-   For database integration, I used an RDS with PostgreSQL. It is only used to save the requester's IP and reversed IP in a table created with user_data.sh. There is also an id field, but it is incremental.
+   - Database integration
+   > For database integration, I used an RDS with PostgreSQL. It is only used to save the requester's IP and reversed IP in a table created with user_data.sh. There is also an id field, but it is incremental.
 
-   For database security, as mentioned in the architecture, it only allows connections on port 5432 coming from the security group of the application instances.
+   > For database security, as mentioned in the architecture, it only allows connections on port 5432 coming from the security group of the application instances.
 
-   The DynamoDB was used solely to manage the .tfstate, as mentioned at the beginning of the documentation.
+   > The DynamoDB was used solely to manage the .tfstate, as mentioned at the beginning of the documentation.
 
 
 ## **Testing the Application**
 
-   > To build the python application image and test it locally
+   To build the python application image and test it locally
 
    ```bash
    sudo docker build -t reversed-ip-app .
