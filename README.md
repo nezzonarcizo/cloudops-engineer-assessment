@@ -199,6 +199,14 @@ Before starting, ensure you have:
 
    > Access through http://127.0.0.1/reversed-ip
 
+
+   The application is deployed in my AWS account and can be tested using the following links:
+
+   https://deel-assessment.4nimbus.com
+   https://deel-assessment.4nimbus.com/reversed-ip
+   
+   > Viewer credentials have also been sent via email, allowing for a more detailed view of the architecture.
+
 ## **Troubleshooting/And what was changed**
 
    - Removed the redirect from port 80 to 443, which prevented testing the simple-web application when no certificate was available.
