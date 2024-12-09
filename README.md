@@ -203,6 +203,7 @@ Before starting, ensure you have:
    The application is deployed in my AWS account and can be tested using the following links:
 
    https://deel-assessment.4nimbus.com
+   
    https://deel-assessment.4nimbus.com/reversed-ip
    
    > Viewer credentials have also been sent via email, allowing for a more detailed view of the architecture.
