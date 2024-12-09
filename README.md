@@ -197,6 +197,8 @@ Before starting, ensure you have:
    sudo docker run --name reversed-ip-app -d -p 8080:5000 reversed-ip-app
    ```
 
+   > Access through http://127.0.0.1/reversed-ip
+
 ## **Troubleshooting/And what was changed**
 
    - Removed the redirect from port 80 to 443, which prevented testing the simple-web application when no certificate was available.
@@ -220,3 +222,5 @@ Before starting, ensure you have:
          password: *******
          SELECT * FROM ips;
          ```
+
+   - While testing, I kept the test on the root '/' at port 8080, even though traffic was mapped via the path pattern to '/reversed-ip'. This was a mistake because, initially, my application was set to listen only on '/'. However, the LoadBalancer forwards this path along with the request, and without a reverse proxy to handle it, this caused an error. This was one of the issues that occurred during my initial tests and required a change: configuring the Flask app to expect the request to arrive at '/reversed-ip'.
