@@ -49,7 +49,7 @@ sudo yum install -y postgresql
 psql --version
 
 fetch_parameters  
-export PGPASSWORD="$DB_PASSWORD"
+# export PGPASSWORD="$DB_PASSWORD"
 
 MAX_RETRIES=5
 RETRY_DELAY=5

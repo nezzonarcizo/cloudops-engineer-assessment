@@ -41,13 +41,8 @@ resource "aws_lb_listener" "http" {
   protocol          = "HTTP"
 
   default_action {
-    type = "redirect"
-
-    redirect {
-      port        = "443"
-      protocol    = "HTTPS"
-      status_code = "HTTP_301"
-    }
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.simple_web_app_tg.arn
   }
 }
 
@@ -139,7 +134,7 @@ resource "aws_lb_target_group" "reversed_ip_app_tg" {
 }
 
 resource "aws_autoscaling_group" "apps_asg" {
-  name                 = "deel-assessment-app-asg"
+  name      = "deel-assessment-app-asg"
   launch_template {
     id      = aws_launch_template.app.id
     version = "$Latest"

@@ -23,11 +23,11 @@ aws dynamodb create-table \
 
 aws secretsmanager create-secret --name "db_password" --secret-string "******SUPER PASSWORD******"
 
-aws secretsmanager create-secret --name "db_name" --secret-string "deelassessmentdb"
+# aws secretsmanager create-secret --name "db_name" --secret-string "deelassessmentdb"
 
-aws secretsmanager create-secret --name "db_username" --secret-string "nezzonarcizo"
+# aws secretsmanager create-secret --name "db_username" --secret-string "nezzonarcizo"
 
-aws secretsmanager create-secret --name "db_port" --secret-string "5432"
+# aws secretsmanager create-secret --name "db_port" --secret-string "5432"
 
 - To delete secrets from secrets manager
 

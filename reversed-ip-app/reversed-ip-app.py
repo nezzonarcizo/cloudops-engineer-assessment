@@ -22,7 +22,7 @@ def get_db_connection():
 
 @app.route("/reversed-ip")
 def index():
-    ip = request.remote_addr
+    ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     reversed_ip = ip[::-1]
 
     try:
